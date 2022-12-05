@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- {% block title %}Correios{% endblock title %} -->
+
+<div class="header-1">
+    <div id="sobre-nos">
+
+
+        <p class="texto2">
+            Digite seu CEP para visualizar os dados <br> <!-- tag br, para quebra de linha -->
+            <br>
+        </p>
+        
+        <input type="text" class="form" id="cep" name="cep" size="15" maxlength="8" autocomplete="off">
+        <button type="button" class="btn btn-primary" onclick="buscaDadosCEP()">Consultar</button>
+        <hr class="my-4">
+        <div style="padding: top 20px;" id="return"></div>
+
+    </div>
+</div>
+{% endblock %}
