@@ -16,14 +16,14 @@ function buscaDadosCEP(){
         else
         {
             document.getElementById('return').innerHTML =
-            'Dados Localizados com Sucesso!' + '<br>'+ '<br>'+
-            'CEP: ' + response.cep + '<br>' +
-            'Logradouro: ' + response.logradouro + '<br>' +
-            'Bairro: ' + response.bairro +'<br>' +
-            'Cidade: ' + response.localidade + '<br>' +
-            'Estado: '+ response.uf + '<br>' +
-            'Código IBGE: ' + response.ibge + '<br>' +
-            'DDD: ' + response.ddd;
+            '<h1>'+'Dados Localizados com Sucesso!'+'</h1>' + '<br>'+ '<br>'+
+            '<h3>'+ 'CEP: ' + response.cep +'</h3>'+
+            '<h3>'+ 'Logradouro: ' + response.logradouro +'</h3>'+
+            '<h3>'+ 'Bairro: ' + response.bairro +'</h3>'+
+            '<h3>'+ 'Cidade: ' + response.localidade +'</h3>'+
+            '<h3>'+ 'Estado: '+ response.uf +'</h3>'+
+            '<h3>'+ 'Código IBGE: ' + response.ibge +'</h3>'+
+            '<h3>'+ 'DDD: ' + response.ddd +'</h3>';
         }
     }
     request.send();

@@ -18,7 +18,7 @@ def estacionamento():
     form = Estacionamento() #pega as informaçoes do arquivo forms.py e retorna a cidade escolhida
     if form.validate_on_submit():#verifica se tem informaçoes no formulario
         vaga = form.vagas.data #pega a string do nome da cidade que veio do formulario
-        previsao_infos = previsao(cidade) # passa o nome da cidade pro tempo.py e retorna as informaçoes do json 
+        previsao_infos = previsao(vaga) # passa o nome da cidade pro tempo.py e retorna as informaçoes do json 
         return render_template('previsao.html', previsao_infos=previsao_infos) # vai renderizar as informaçoes do html com o json 
     return render_template('estacionamento.html', form=form) #caso o form nao seja valido permanece na pagina estacionamento 
 
