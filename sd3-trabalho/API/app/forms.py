@@ -3,7 +3,7 @@ from wtforms import SelectField, SubmitField, StringField
 from wtforms.validators import DataRequired
 
 
-class Estacionamento(FlaskForm):
+class Estacionar(FlaskForm):
     # cidades = open("app\process\cidades.txt", 'r').readlines()
     # choices = []
     # for i in cidades:
@@ -16,3 +16,7 @@ class Estacionamento(FlaskForm):
 class EscolhaCep(FlaskForm):
     cep = StringField(u'cep')
     submit = SubmitField('Pesquisar')
+
+class Estacionamento(FlaskForm):
+    vagas = open("app/process/vagas.txt",'r').readlines()
+    modeloveiculo = []
