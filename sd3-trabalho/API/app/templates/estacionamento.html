@@ -5,9 +5,22 @@
     <div id="sobre-nos">
         <h1 class="display-4"> Bem Vindo ao Estacionamento IFSC!</h1>
         <hr class="my-4">
-        <p>Escolha a Vaga Disponível abaixo:</p>
-        <p>Para "Alocar a vaga" informe: modelo e placa</p>
+        <p>Para "Alocar a vaga" informe: numero modelo e placa</p>
+        <p>
+            <script src="../static/js/alocarVaga.js"></script>
+            <form onsubmit="vagaAlocada()">
+                <label for="numerovaga">Numero Vaga</label>
+                <input type="text" name="vaga" id="vaga" class="form">
+                <label for="modelo">Modelo</label>
+                <input type="text" name="modelo" id="modelo" class="form">
+                <label for="placa">Placa</label>
+                <input type="text" name="placa" id="placa" class="form">
+                <button type="submit" class="btn btn-outline-danger">Alocar Vaga</button>
+            </form>
+        </p>
+        <p>Todas as vagas são mostradas abaixo:</p>
     </div>
+    <!-- abaixo é a exibição das vagas com os dados já preenchidos pela ocupação das vagas -->
     <div class="container-fluid">
         <div class="row">
             <div class=" col">
