@@ -15,3 +15,14 @@ opcao = [
     'alocado',
     'livre',
 ]
+
+def vagaAlocada(vaga,modelo,placa):
+    request = open('app\process\vagas.txt','r').readlines()
+    
+    if(vaga+'&'+modelo+'&'+placa) in request:
+        vagaOcupada = [{
+            'vaga':vaga,
+            'modelo':modelo,
+            'placa':placa
+        }]
+        return vagaOcupada
