@@ -5,158 +5,20 @@
     <div id="sobre-nos">
         <h1 class="display-4"> Bem Vindo ao Estacionamento IFSC!</h1>
         <hr class="my-4">
-        <p>Para "Alocar a vaga" informe: numero modelo e placa</p>
-        <p>
-            <script src="../static/js/alocarVaga.js"></script>
-            <form onsubmit="vagaAlocada()">
-                <label for="numerovaga">Numero Vaga</label>
-                <input type="text" name="vaga" id="vaga" class="form">
-                <label for="modelo">Modelo</label>
-                <input type="text" name="modelo" id="modelo" class="form">
-                <label for="placa">Placa</label>
-                <input type="text" name="placa" id="placa" class="form">
-                <button type="submit" class="btn btn-outline-danger">Alocar Vaga</button>
-            </form>
-        </p>
-        <p>Todas as vagas são mostradas abaixo:</p>
-    </div>
-    <!-- abaixo é a exibição das vagas com os dados já preenchidos pela ocupação das vagas -->
-    <div class="container-fluid">
+        <p>Para "Alocar uma vaga" Escolha um número e modelo veículo</p>
         <div class="row">
-            <div class=" col">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Vaga 01</div>
-                    <div class="card-body">
-                        <label>Modelo</label>
-                        <input type="text" name="modeloveiculo" class="form-control">
-                        <label>Placa</label>
-                        <input type="text" name="placaveiculo" class="form-control">
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-danger">
-                            <ion-icon name="save-sharp"></ion-icon> Alocar Vaga
-                        </button>
-                    </div>
-                </div>
+            <div class="col">
+                <form action="" method="POST">
+                    {{ form.vaga }}
+                    <!-- <p>{{ form.submit() }}</p> -->
+                </form>
             </div>
-            <div class=" col">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Vaga 02</div>
-                    <div class="card-body">
-                        <label>Modelo</label>
-                        <input type="text" name="modelo" class="form-control">
-                        <label>Placa</label>
-                        <input type="text" name="placa" class="form-control">
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-danger">
-                            <ion-icon name="save-sharp"></ion-icon> Alocar Vaga
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" col">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Vaga 03</div>
-                    <div class="card-body">
-                        <label>Modelo</label>
-                        <input type="text" name="modelo" class="form-control">
-                        <label>Placa</label>
-                        <input type="text" name="placa" class="form-control">
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-danger">
-                            <ion-icon name="save-sharp"></ion-icon> Alocar Vaga
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class=" col">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Vaga 04</div>
-                    <div class="card-body">
-                        <label>Modelo</label>
-                        <input type="text" name="modelo" class="form-control">
-                        <label>Placa</label>
-                        <input type="text" name="placa" class="form-control">
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-danger">
-                            <ion-icon name="save-sharp"></ion-icon> Alocar Vaga
-                        </button>
-                    </div>
-                </div>
+            <div class="col">
+                <form action="" method="POST">
+                    {{ form.modelo }}
+                </form>
             </div>
         </div>
+        <p>{{ form.submit() }}</p>
     </div>
-    <!-- vagas 05 a 09 -->
-    <div class="row">
-        <div class=" col">
-            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">Vaga 05</div>
-                <div class="card-body">
-                    <label>Modelo</label>
-                    <input type="text" name="modelo" class="form-control">
-                    <label>Placa</label>
-                    <input type="text" name="placa" class="form-control">
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-danger">
-                        <ion-icon name="save-sharp"></ion-icon> Alocar Vaga
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class=" col">
-            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">Vaga 06</div>
-                <div class="card-body">
-                    <label>Modelo</label>
-                    <input type="text" name="modelo" class="form-control">
-                    <label>Placa</label>
-                    <input type="text" name="placa" class="form-control">
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-danger">
-                        <ion-icon name="save-sharp"></ion-icon> Alocar Vaga
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class=" col">
-            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">Vaga 07</div>
-                <div class="card-body">
-                    <label>Modelo</label>
-                    <input type="text" name="modelo" class="form-control">
-                    <label>Placa</label>
-                    <input type="text" name="placa" class="form-control">
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-danger">
-                        <ion-icon name="save-sharp"></ion-icon> Alocar Vaga
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class=" col">
-            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">Vaga 08</div>
-                <div class="card-body">
-                    <label>Modelo</label>
-                    <input type="text" name="modelo" class="form-control">
-                    <label>Placa</label>
-                    <input type="text" name="placa" class="form-control">
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-danger">
-                        <ion-icon name="save-sharp"></ion-icon> Alocar Vaga
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 {% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+    <h3 class="ajuste">{{lista_vagas[0].vaga}} </h3>
+    <h3 class="ajuste">{{lista_vagas[0].modelo}} </h3>
+    <h3 class="ajuste">{{lista_vagas[0].placa}} </h3>
+    <div class="cards">
+        {%for i in lista_vagas%}
+         <div class="card">
+                <p>{{ i.data[0] }}/{{i.data[1]}}</p>
+                <p>{{ i.vaga }}</p>
+                <p>{{ i.modelo }}</p>
+                <p>{{ i.placa }}</p>
+                <p>chegou até aqui</p>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+{% endblock %}

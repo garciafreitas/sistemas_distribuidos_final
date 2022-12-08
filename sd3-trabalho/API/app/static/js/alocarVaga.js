@@ -10,13 +10,13 @@ function vagaAlocada(){
     
     request.open('GET',url);
     request.onerror = function(e){
-        document.getElementById('vaga'+'modelo'+'placa').innerHTML = 'Vaga, Modelo e Plca'
+        document.getElementById('vaga'+'modelo'+'placa').innerHTML = 'Vaga, Modelo e Placa'
     }
     request.onload = () =>{
         var jsondata =JSON.parse(request.responseText);
 
         if(jsondata.erro === true){
-            document.getElementById('vaga'+'modelo'+'placa').innerHTML = 'Vaga, Modelo e Plca Invalidos'
+            document.getElementById('vaga'+'modelo'+'placa').innerHTML = 'Vaga, Modelo e Placa Invalidos'
         }
         else
         {
@@ -28,6 +28,4 @@ function vagaAlocada(){
         }
     }
     request.send();
-
-
 }
