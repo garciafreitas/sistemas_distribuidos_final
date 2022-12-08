@@ -18,5 +18,6 @@ class EscolhaCep(FlaskForm):
     submit = SubmitField('Pesquisar')
 
 class Estacionamento(FlaskForm):
-    vagas = open("app/process/vagas.txt",'r').readlines()
-    modeloveiculo = []
+    vagas = "1"
+    modeloveiculo = "fiat"
+    placa ="abc1234"
