@@ -1,30 +1,20 @@
 import random
 from datetime import date
-def previsao(vagas,modelos,vagasEmodelos):
-    vagas = open("app\process\cidade.txt", 'r').readlines()
-    modelos = open("app\process\modelo.txt", 'r').readlines()
-    vagasEmodelos = open("app\process\cidadeEvagas.txt",'w').write(vagas,modelos)
+def previsao(vaga,modelo,placa):
+    vagas = open("app\process\cidade.txt", 'a').readlines()
 
-    if (vagas+'\n' + modelos+'\n') in vagasEmodelos:
+    if (vaga+'\n' + modelo+'\n'+'\n'+placa) in vagas:
         resultado = [{
-            'vaga': vagas,
-            'modelo':((str.format)),
+            'vaga':  vaga,
+            'modelo': modelo,
+            'placa':  placa
+
+
         }]
+        print(vaga)
+        print(modelo)
+        print(placa)
         return resultado
     return None
 
-opcao = [
-    'alocado',
-    'livre',
-]
 
-# def vagaAlocada(vaga,modelo,placa):
-#     request = open('app\process\cidade.txt','r').readlines()
-    
-#     if(vaga+'&'+modelo+'&'+placa) in request:
-#         vagaOcupada = [{
-#             'vaga':vaga,
-#             'modelo':modelo,
-#             'placa':placa
-#         }]
-#         return vagaOcupada

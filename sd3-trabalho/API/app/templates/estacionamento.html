@@ -5,20 +5,28 @@
     <div id="sobre-nos">
         <h1 class="display-4"> Bem Vindo ao Estacionamento IFSC!</h1>
         <hr class="my-4">
-        <p>Para "Alocar uma vaga" Escolha um número e modelo veículo</p>
+        <p>Para "Alocar uma vaga" Informe numero, modelo veículo e placa, ao final clique em Enviar</p>
         <div class="row">
             <div class="col">
-                <form action="" method="POST">
-                    {{ form.vaga }}
-                    <!-- <p>{{ form.submit() }}</p> -->
+                <form method="POST" action="{{url_for('estacionamento')}}">
+                    <p>
+                        {{form.vaga.label}}
+                        <br>
+                        {{form.vaga}}
+                    </p>
+                    <p>
+                        {{form.modelo.label}}
+                        <br>
+                        {{form.modelo}}
+                    </p>
+                    <p>
+                        {{form.placa.label}}
+                        <br>
+                        {{form.placa}}
+                    </p>
+                        {{form.submit}}
+
                 </form>
             </div>
-            <div class="col">
-                <form action="" method="POST">
-                    {{ form.modelo }}
-                </form>
-            </div>
-        </div>
-        <p>{{ form.submit() }}</p>
     </div>
 {% endblock %}

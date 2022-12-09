@@ -16,12 +16,22 @@ def index():
 @app.route('/estacionamento', methods=['GET','POST'])
 def estacionamento():
     form = Estacionamento() #pega as informaçoes do arquivo forms.py e retorna a vaga escolhida
-    if form.validate_on_submit():#verifica se tem informaçoes no formulario
-        vagaOcupada = form.vaga.data #pega a string da vaga que veio do formulario
-        # vagaModelo = form.modelo.data #pega a string da vaga que veio do formulario
-        # vagaPlaca = form.placa.data #pega a string da vaga que veio do formulario
-        lista_vagas = list_vagas(vagaOcupada) # passa o nome da cidade pro vagas.py e retorna as informaçoes do json 
-        return render_template('estacionamentoOcupado.html', lista_vagas=lista_vagas) # vai renderizar as informaçoes do html com o json 
+    
+    if form.validate_on_submit():
+        dados = lista_vagas
+        vagaOcupada = form.vaga.data
+        vagaModelo = form.modelo.data
+        vagaPlaca = form.placa.data
+        lista_vagas = list_vagas(vagaOcupada,vagaModelo,vagaPlaca)
+
+        if dados.lower(vagaOcupada,vagaModelo,vagaPlaca) in lista_vagas:
+            form.vaga.data = ""
+            form.modelo.data = ""
+            form.placa.data = ""
+            print("Chegou ate aqui....")
+            return render_template('estacionamentoOcupado.html', lista_vagas=lista_vagas) # vai renderizar as informaçoes do html com o json 
+    else:
+        print("azedou....")
     return render_template('estacionamento.html', form=form) #caso o form nao seja valido permanece na pagina estacionamento 
 
 @app.route('/externa', methods=['GET','POST'])
